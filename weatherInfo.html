@@ -6,6 +6,7 @@
   <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="style.css">
   <script src="script.js"></script>
+  <script src="dateModule.js" defer></script>
 </head>
 
 <body onload="search()">
@@ -27,14 +28,18 @@
                 <div class="empty"></div>
                 <article class="today">
                   <h2>Today</h2>
-                  <p id="day"></p>
-                  <span id="month"> </span>
-                  <span id="dayNum"></span>
-                  <p><img id="reloadIcon" src="images/reload-icon.svg" onclick="search();"></p>
+                  <p class="day"></p><!--index = 0-->
+                  <span class="month"> </span><!--index = 0-->
+                  <span class="dayNum"></span><!--index = 0-->
+                  <p><img id="reloadIcon" src="images/reload-icon.svg" onclick="search(); currentDate();"></p>
                 </article>
+
                 <article class="today">
                 <img id="cityIcon" src="" width="107" height="90"><br>
                 <h1 id="cityTemp"></h1>
+                <p class="windChill">feel-like: 
+                  <span class="wch"></span>
+                </p>
                 <p id="cityWeatherDesc"></p>
               </article>
               <div class="empty"></div>
@@ -44,34 +49,50 @@
             <section>
               <div class="grid-container-two">
                 <article class="fivCitWea">
-                  <p class="day"></p>
-                  <span class="month"></span>-<span class="dayNum"></span><br>
+                  <p class="day"></p><!--index = 1-->
+                  <span class="month"></span><!--index = 1-->
+                  <br>
                   <img id="cityIcon1" src="" width="107" height="98"><br>
                   <h1 id="cityTemp1"></h1>
+                  <p class="windChill">feel-like: 
+                    <span class="wch"></span>
+                  </p>
                   <p id="cityWeatherDesc1"></p>
                 </article>
                 
                 <article class="fivCitWea">
-                  <p class="day"></p>
-                  <span class="month"></span>-<span class="dayNum"></span><br>
+                  <p class="day"></p><!--index = 2-->
+                  <span class="month"></span><!--index = 2-->
+                  <br>
                   <img id="cityIcon2" src="" width="107" height="98"><br>
                   <h1 id="cityTemp2"></h1>
+                  <p class="windChill">feel-like: 
+                    <span class="wch"></span>
+                  </p>
                   <p id="cityWeatherDesc2"></p>
                 </article>
                 
                 <article class="fivCitWea">
-                  <p class="day"></p>
-                  <span class="month"></span>-<span class="dayNum"></span><br>
+                  <p class="day"></p><!--index = 3-->
+                  <span class="month"></span><!--index = 3-->
+                  <br>
                   <img id="cityIcon3" src="" width="107" height="98"><br>
                   <h1 id="cityTemp3"></h1>
+                  <p class="windChill">feel-like: 
+                    <span class="wch"></span>
+                  </p>
                   <p id="cityWeatherDesc3"></p>
                 </article>
                 
                 <article class="fivCitWea">
-                  <p class="day"></p>
-                  <span class="month"></span>-<span class="dayNum"></span><br>
+                  <p class="day"></p><!--index = 4-->
+                  <span class="month"></span><!--index = 4-->
+                  <br>
                   <img id="cityIcon4" src="" width="107" height="98"><br>
                   <h1 id="cityTemp4"></h1>
+                  <p class="windChill">feel-like: 
+                    <span class="wch"></span>
+                  </p>
                   <p id="cityWeatherDesc4"></p>
                 </article>
               </div>
@@ -82,7 +103,7 @@
           <footer>
               <p>All content &copy;</p>
               <p>Author: Elias Monzon</p> 
-              <p id="currentDate">Current date and time</p>
+              <p id="currentDate"></p>
         </footer>
     </div> <!--end content div-->
   <!--</div> end banner div-->
